@@ -1,6 +1,6 @@
 {
   "name": "@yuntian001/vue-setup-extend",
-  "version": "1.0.0",
+  "version": "1.0.0-beta.0",
   "description": "Make the vue script setup syntax support the attribute",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
@@ -23,7 +23,7 @@
     "eslint:fix": "eslint . --ext .ts --fix",
     "prettier": "prettier --cache  -l \"./**/*\"",
     "prettier:fix": "prettier --write --cache  -l \"./**/*\"",
-    "tsc":"tsc --noEmit",
+    "tsc": "tsc --noEmit",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
