@@ -1,6 +1,6 @@
 {
   "name": "@yuntian001/vue-setup-extend",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0",
   "description": "Make the vue script setup syntax support the attribute",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
