@@ -1,0 +1,72 @@
+{
+  "name": "@yuntian001/vue-setup-extend",
+  "version": "1.0.0",
+  "description": "Make the vue script setup syntax support the attribute",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.cjs",
+    "default": "./dist/index.cjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rimraf dist",
+    "build": "npm run clean && microbundle --target node  -f esm,cjs",
+    "release": "release-it",
+    "release-test": "release-it --dry-run",
+    "eslint": "eslint . --cache --ext .ts",
+    "eslint:fix": "eslint . --ext .ts --fix",
+    "prettier": "prettier --cache  -l \"./**/*\"",
+    "prettier:fix": "prettier --write --cache  -l \"./**/*\"",
+    "tsc":"tsc --noEmit",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuntian001/vue-setup-extend.git"
+  },
+  "keywords": [
+    "vue",
+    "setup",
+    "vite"
+  ],
+  "author": "yuntian001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuntian001/vue-setup-extend/issues"
+  },
+  "homepage": "https://github.com/yuntian001/vue-setup-extend#readme",
+  "peerDependencies": {
+    "vite": ">2.0.2",
+    "vue": ">3.2.25"
+  },
+  "dependencies": {
+    "magic-string": "^0.26.6",
+    "xregexp": "^5.1.1"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@release-it/conventional-changelog": "^5.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.25.0",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "microbundle": "^0.15.1",
+    "prettier": "^2.7.1",
+    "release-it": "^15.5.0",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.8.4"
+  },
+  "lint-staged": {
+    "**/*": "prettier --cache --write --ignore-unknown",
+    "*.ts": "eslint --cache"
+  }
+}
